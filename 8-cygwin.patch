@@ -1,0 +1,14 @@
+--- origsrc/SliderPuzzle-8/SliderPuzzleActivity.py	2009-02-15 21:52:40.000000000 -0600
++++ src/SliderPuzzle-8/SliderPuzzleActivity.py	2013-01-28 21:19:58.483075300 -0600
+@@ -320,7 +320,10 @@ class SliderPuzzleActivity(Activity, Tub
+         self.frozen = FrozenState(self.ui)
+         self.ui.game.connect('shuffled', self.frozen.sync)
+ 
+-        TubeHelper.__init__(self, tube_class=GameTube, service=SERVICE)
++        try:
++            TubeHelper.__init__(self, tube_class=GameTube, service=SERVICE)
++        except:
++            pass
+ 
+     def _destroy_cb(self, data=None):
+         return True

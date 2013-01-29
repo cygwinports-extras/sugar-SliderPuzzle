@@ -3,3 +3,6 @@ VERSION=8
 RELEASE=2
 SUGAR_TYPE="Honey"
 inherit sugar
+
+
+PATCH_URI="8-cygwin.patch"
